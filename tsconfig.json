@@ -17,39 +17,61 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-
     "baseUrl": ".",
-
     "paths": {
-      "@/*": ["./*"],
-      "@/app/*": ["app/*"],
-      "@/components/*": ["components/*"],
-      "@/config/*": ["config/*"],
-      "@/data/*": ["data/*"],
-      "@/docs/*": ["docs/*"],
-      "@/pages/*": ["pages/*"],
-      "@/projects/*": ["projects/*"],
-      "@/public/*": ["public/*"],
-      "@/scripts/*": ["scripts/*"],
-      "@/seo/*": ["seo/*"],
-      "@/styles/*": ["styles/*"],
-      "@/assets/*": ["assets/*"]
+      "@/*": [
+        "./*"
+      ],
+      "@/app/*": [
+        "app/*"
+      ],
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/config/*": [
+        "config/*"
+      ],
+      "@/data/*": [
+        "data/*"
+      ],
+      "@/docs/*": [
+        "docs/*"
+      ],
+      "@/pages/*": [
+        "pages/*"
+      ],
+      "@/projects/*": [
+        "projects/*"
+      ],
+      "@/public/*": [
+        "public/*"
+      ],
+      "@/scripts/*": [
+        "scripts/*"
+      ],
+      "@/seo/*": [
+        "seo/*"
+      ],
+      "@/styles/*": [
+        "styles/*"
+      ],
+      "@/assets/*": [
+        "assets/*"
+      ]
     },
-
     "plugins": [
       {
         "name": "next"
       }
     ]
   },
-
   "include": [
-    "next-env.d.ts",
+    "**/*.mjs",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.mjs"
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
   ],
-
   "exclude": [
     "node_modules"
   ]
