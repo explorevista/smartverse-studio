@@ -1,11 +1,31 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat, Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+  weight: ["600", "700", "800"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-jetbrains-mono",
 });
 
 export const metadata: Metadata = {
@@ -49,25 +69,17 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Smart Verse Studio",
-    description:
-      "Official Smart Verse Studio Digital Ecosystem",
-
+    description: "Official Smart Verse Studio Digital Ecosystem",
     url: "https://smartversestudio.com",
-
     siteName: "Smart Verse Studio",
-
     locale: "en_US",
-
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-
     title: "Smart Verse Studio",
-
-    description:
-      "Official Smart Verse Studio Digital Ecosystem",
+    description: "Official Smart Verse Studio Digital Ecosystem",
   },
 };
 
@@ -84,7 +96,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.variable}>
+      <body
+        className={`${inter.variable} ${montserrat.variable} ${poppins.variable} ${jetbrainsMono.variable}`}
+      >
         {children}
       </body>
     </html>
