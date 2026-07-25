@@ -81,7 +81,7 @@ export function InlineLink({
   ...props
 }: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
   return (
-    
+    <a
       className={cn(
         "text-primary underline underline-offset-4 hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm",
         className
