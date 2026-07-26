@@ -18,7 +18,7 @@ export function EcosystemOverview() {
           </Typography>
           <Typography as="p" variant="body-md" muted className="mt-4">
             Eight independent products, one shared identity — each built to
-            solve a real problem, connected back to Smart Verse Studio.
+            solve a real problem, connected back to the headquarters.
           </Typography>
         </div>
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/layout";
-import { headquarters, ecosystemProjects } from "@/data/ecosystem";
+import { headquarters } from "@/data/ecosystem";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
