@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navigation/navbar";
 import { Hero } from "@/components/sections/hero";
+import { EcosystemOverview } from "@/components/sections/ecosystem-overview";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <EcosystemOverview />
       </main>
     </>
   );
