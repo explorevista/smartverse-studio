@@ -38,7 +38,7 @@ export function FounderSection() {
             </Button>
 
             <Button asChild variant="ghost" size="md">
-              
+              <a
                 href={`https://wa.me/${founder.whatsapp.replace(/\D/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
