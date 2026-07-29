@@ -1,11 +1,15 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Container, Section } from "@/components/ui/layout";
 import { Typography } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
-import { headquarters } from "@/data/ecosystem";
+import { headquarters, ecosystemProjects } from "@/data/ecosystem";
 
 export function CtaBanner() {
+  const liveProjectsCount = ecosystemProjects.filter(
+    (project) => project.status === "live"
+  ).length;
+
   return (
     <Section id="cta">
       <Container>
@@ -33,6 +37,13 @@ export function CtaBanner() {
             <Button asChild variant="outline" size="lg">
               <Link href="/founder">Meet the Founder</Link>
             </Button>
+          </div>
+
+          <div className="mt-8 flex items-center justify-center gap-2 border-t border-white/10 pt-6">
+            <ShieldCheck className="h-4 w-4 text-primary" aria-hidden="true" />
+            <Typography as="span" variant="caption">
+              {liveProjectsCount} live projects already operating inside the {headquarters.name} ecosystem
+            </Typography>
           </div>
         </div>
       </Container>
