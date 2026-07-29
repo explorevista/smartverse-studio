@@ -72,7 +72,7 @@ export function Footer() {
             </Typography>
             <ul className="mt-4 space-y-3">
               <li>
-                
+                  <a
                   href={`mailto:${founder.email}`}
                   className="flex items-center gap-2 text-body-sm text-foreground/70 hover:text-primary transition-colors"
                 >
@@ -81,7 +81,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                
+                  <a
                   href={`https://wa.me/${founder.whatsapp.replace(/\D/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
