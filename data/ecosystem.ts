@@ -162,3 +162,14 @@ export const roadmapPhases = [
     projects: ecosystemProjects.filter((p) => p.status === "planning"),
   },
 ];
+
+export const platformFeatures = [
+  { id: "ai", title: "AI-Powered Tools", description: "Smart Tools Universe brings intelligent, productivity-first AI tools into one workspace.", icon: "sparkles" },
+  { id: "publishing", title: "Digital Publishing", description: "Digital Reads Studio delivers curated books and learning resources under one platform.", icon: "book-open" },
+  { id: "travel", title: "Travel & Discovery", description: "ExploreVista and TravelScope 360 connect travelers to destinations, deals, and bookings.", icon: "map-pinned" },
+  { id: "healthcare", title: "Digital Healthcare", description: "GreenCare Digital Hospital links patients with verified doctors for online consultations.", icon: "heart-pulse" },
+  { id: "realestate", title: "Real Estate Marketplace", description: "Smart Rent Universe connects tenants directly with property owners across Pakistan.", icon: "home" },
+  { id: "local", title: "Local Services", description: "KarigarHub Pakistan connects households with trusted, verified skilled workers.", icon: "wrench" },
+  { id: "architecture", title: "Firebase-Ready Architecture", description: "Built on a scalable Next.js and Firebase foundation, ready for authentication and data at any scale.", icon: "shield-check" },
+  { id: "design", title: "Premium Design System", description: "One consistent, modern UI system shared across the entire ecosystem — fast, responsive, accessible.", icon: "layout-grid" },
+];
