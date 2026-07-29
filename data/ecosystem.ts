@@ -162,3 +162,24 @@ export const roadmapPhases = [
     projects: ecosystemProjects.filter((p) => p.status === "planning"),
   },
 ];
+
+export const roadmapPhases = [
+  {
+    id: "live",
+    label: "Live Today",
+    description: "Projects already serving real users.",
+    projects: ecosystemProjects.filter((p) => p.status === "live"),
+  },
+  {
+    id: "in-development",
+    label: "In Development",
+    description: "Actively being built inside the ecosystem.",
+    projects: ecosystemProjects.filter((p) => p.status === "in-development"),
+  },
+  {
+    id: "planning",
+    label: "Planning",
+    description: "Scoped for future development.",
+    projects: ecosystemProjects.filter((p) => p.status === "planning"),
+  },
+];
