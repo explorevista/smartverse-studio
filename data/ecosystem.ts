@@ -141,3 +141,24 @@ export const analyticsConfig = {
   adsTxtLine: "google.com, pub-7495097418204600, DIRECT, f08c47fec0942fa0",
   searchConsoleVerification: "-RLGta2YHyblTY3SKORbDxIig2jg7TR1ZlQib9Hx28w",
 };
+
+export const roadmapPhases = [
+  {
+    id: "live",
+    label: "Live Today",
+    description: "Projects already serving real users.",
+    projects: ecosystemProjects.filter((p) => p.status === "live"),
+  },
+  {
+    id: "in-development",
+    label: "In Development",
+    description: "Actively being built inside the ecosystem.",
+    projects: ecosystemProjects.filter((p) => p.status === "in-development"),
+  },
+  {
+    id: "planning",
+    label: "Planning",
+    description: "Scoped for future development.",
+    projects: ecosystemProjects.filter((p) => p.status === "planning"),
+  },
+];
