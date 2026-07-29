@@ -5,6 +5,7 @@ import { FounderSection } from "@/components/sections/founder";
 import { Timeline } from "@/components/sections/timeline";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { Features } from "@/components/sections/features";
+import { Footer } from "@/components/navigation/footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Features />
         <CtaBanner />
       </main>
+      <Footer />
     </>
   );
 }
