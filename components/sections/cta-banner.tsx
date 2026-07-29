@@ -1,0 +1,41 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Container, Section } from "@/components/ui/layout";
+import { Typography } from "@/components/ui/typography";
+import { Button } from "@/components/ui/button";
+import { headquarters } from "@/data/ecosystem";
+
+export function CtaBanner() {
+  return (
+    <Section id="cta">
+      <Container>
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 px-6 py-16 text-center backdrop-blur-md sm:px-12 sm:py-24">
+          <div
+            className="pointer-events-none absolute inset-0 -z-10 bg-hero-gradient opacity-40"
+            aria-hidden="true"
+          />
+
+          <Typography as="h2" variant="display-md" className="mx-auto max-w-2xl">
+            Ready to Explore the {headquarters.name} Ecosystem?
+          </Typography>
+
+          <Typography as="p" variant="body-md" muted className="mx-auto mt-4 max-w-xl">
+            {headquarters.description}
+          </Typography>
+
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button asChild variant="gradient" size="lg">
+              <Link href="/ecosystem">
+                Explore the Ecosystem
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/founder">Meet the Founder</Link>
+            </Button>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
