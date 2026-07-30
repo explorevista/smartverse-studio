@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 
 export function Card({
   className,
@@ -19,26 +20,16 @@ export function Card({
   );
 }
 
+const statusLabels = {
+  live: "Live",
+  "in-development": "In Development",
+  planning: "Planning",
+} as const;
+
 export function CardBadge({
   status,
 }: {
   status: "live" | "in-development" | "planning";
 }) {
-  const statusMap = {
-    live: { label: "Live", className: "bg-success/10 text-success border-success/30" },
-    "in-development": { label: "In Development", className: "bg-primary/10 text-primary border-primary/30" },
-    planning: { label: "Planning", className: "bg-slate-500/10 text-muted border-slate-500/30" },
-  };
-  const { label, className } = statusMap[status];
-
-  return (
-    <span
-      className={cn(
-        "inline-flex items-center rounded-full border px-3 py-1 text-caption font-medium",
-        className
-      )}
-    >
-      {label}
-    </span>
-  );
+  return <Badge variant={status}>{statusLabels[status]}</Badge>;
 }

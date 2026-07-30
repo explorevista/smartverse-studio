@@ -8,6 +8,8 @@ const badgeVariants = cva(
     variants: {
       variant: {
         live: "border-success/30 bg-success/10 text-success",
+        "in-development": "border-primary/30 bg-primary/10 text-primary",
+        planning: "border-slate-500/30 bg-slate-500/10 text-muted",
         beta: "border-primary/30 bg-primary/10 text-primary",
         "coming-soon": "border-slate-500/30 bg-slate-500/10 text-muted",
         premium: "border-primary/30 bg-primary/10 text-primary",
