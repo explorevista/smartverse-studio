@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Container, Section, Grid } from "@/components/ui/layout";
 import { Typography } from "@/components/ui/typography";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { Card, CardBadge } from "@/components/ui/card";
 import { ecosystemProjects } from "@/data/ecosystem";
 
@@ -9,18 +10,11 @@ export function EcosystemOverview() {
   return (
     <Section id="ecosystem">
       <Container>
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <Typography as="span" variant="overline">
-            The Ecosystem
-          </Typography>
-          <Typography as="h2" variant="display-md" className="mt-4">
-            Every Project, One Headquarters
-          </Typography>
-          <Typography as="p" variant="body-md" muted className="mt-4">
-            Eight independent products, one shared identity — each built to
-            solve a real problem, connected back to the headquarters.
-          </Typography>
-        </div>
+        <SectionHeading
+          eyebrow="The Ecosystem"
+          title="Every Project, One Headquarters"
+          description="Eight independent products, one shared identity — each built to solve a real problem, connected back to the headquarters."
+        />
 
         <Grid cols={3} gap="md">
           {ecosystemProjects.map((project) => (

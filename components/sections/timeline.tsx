@@ -1,19 +1,13 @@
 import { Container, Section } from "@/components/ui/layout";
 import { Typography } from "@/components/ui/typography";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { roadmapPhases } from "@/data/ecosystem";
 
 export function Timeline() {
   return (
     <Section id="roadmap">
       <Container>
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <Typography as="span" variant="overline">
-            Roadmap
-          </Typography>
-          <Typography as="h2" variant="display-md" className="mt-4">
-            Where the Ecosystem Stands Today
-          </Typography>
-        </div>
+        <SectionHeading eyebrow="Roadmap" title="Where the Ecosystem Stands Today" />
 
         <div className="mx-auto max-w-2xl">
           {roadmapPhases.map((phase, index) => (
