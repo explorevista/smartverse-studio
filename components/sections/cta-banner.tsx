@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Container, Section } from "@/components/ui/layout";
+import { GlassPanel } from "@/components/ui/glass-panel";
 import { Typography } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
 import { headquarters, ecosystemProjects } from "@/data/ecosystem";
@@ -13,7 +14,7 @@ export function CtaBanner() {
   return (
     <Section id="cta">
       <Container>
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 px-6 py-16 text-center backdrop-blur-md sm:px-12 sm:py-24">
+        <GlassPanel className="px-6 py-16 text-center sm:px-12 sm:py-24">
           <div
             className="pointer-events-none absolute inset-0 -z-10 bg-hero-gradient opacity-40"
             aria-hidden="true"

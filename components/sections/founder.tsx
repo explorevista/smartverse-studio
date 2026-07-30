@@ -1,5 +1,6 @@
 import { Mail, MessageCircle } from "lucide-react";
 import { Container, Section } from "@/components/ui/layout";
+import { GlassPanel } from "@/components/ui/glass-panel";
 import { Typography } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
 import { founder, headquarters } from "@/data/ecosystem";
@@ -8,7 +9,7 @@ export function FounderSection() {
   return (
     <Section id="founder">
       <Container>
-        <div className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md sm:p-12">
+        <GlassPanel className="mx-auto max-w-3xl p-8 sm:p-12">
           <Typography as="span" variant="overline">
             The Founder
           </Typography>

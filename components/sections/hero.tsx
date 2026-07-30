@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Sparkles, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/layout";
+import { GlassPanel } from "@/components/ui/glass-panel";
 import { Typography } from "@/components/ui/typography";
 import { headquarters, ecosystemProjects, founder } from "@/data/ecosystem";
 
@@ -56,7 +57,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-14 flex flex-wrap items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
+          <GlassPanel className="mt-14 flex flex-wrap items-center justify-center gap-3 p-4">
             {highlightedProjects.map((project) => (
               <span
                 key={project.id}
@@ -65,7 +66,7 @@ export function Hero() {
                 {project.name}
               </span>
             ))}
-          </div>
+          </GlassPanel>
 
           <div className="mt-14 flex items-center justify-center gap-10 border-t border-white/10 pt-10">
             <div className="text-center">
