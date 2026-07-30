@@ -5,6 +5,7 @@ import { Features } from "@/components/sections/features";
 import { Statistics } from "@/components/sections/statistics";
 import { FounderSection } from "@/components/sections/founder";
 import { Timeline } from "@/components/sections/timeline";
+import { Mission } from "@/components/sections/mission";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { Footer } from "@/components/navigation/footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Features />
         <FounderSection />
         <Timeline />
+        <Mission />
         <CtaBanner />
       </main>
       <Footer />
