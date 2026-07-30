@@ -49,7 +49,7 @@ export function FounderSection() {
               </a>
             </Button>
           </div>
-        </div>
+        </GlassPanel>
       </Container>
     </Section>
   );

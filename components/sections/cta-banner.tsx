@@ -46,7 +46,7 @@ export function CtaBanner() {
               {liveProjectsCount} live projects already operating inside the {headquarters.name} ecosystem
             </Typography>
           </div>
-        </div>
+        </GlassPanel>
       </Container>
     </Section>
   );
