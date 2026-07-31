@@ -1,4 +1,5 @@
 import { Container, Section } from "@/components/ui/layout";
+import { GlassPanel } from "@/components/ui/glass-panel";
 import { Typography } from "@/components/ui/typography";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { roadmapPhases } from "@/data/ecosystem";
@@ -9,40 +10,36 @@ export function Timeline() {
       <Container>
         <SectionHeading eyebrow="Roadmap" title="Where the Ecosystem Stands Today" />
 
-        <div className="mx-auto max-w-2xl">
-          {roadmapPhases.map((phase, index) => (
-            <div key={phase.id} className="relative pl-10 pb-12 last:pb-0">
-              {index !== roadmapPhases.length - 1 && (
-                <div
-                  className="absolute left-[7px] top-4 h-full w-px bg-white/10"
-                  aria-hidden="true"
-                />
-              )}
-              <div
-                className="absolute left-0 top-1.5 h-4 w-4 rounded-full border-2 border-primary bg-background"
-                aria-hidden="true"
-              />
-
-              <Typography as="h3" variant="h4">
-                {phase.label}
-              </Typography>
-              <Typography as="p" variant="body-sm" muted className="mt-1">
-                {phase.description}
-              </Typography>
+        <div className="mx-auto max-w-3xl space-y-4" role="list" aria-label="Project roadmap phases">
+          {roadmapPhases.map((phase) => (
+            <GlassPanel key={phase.id} className="border-[color:var(--border-color)] bg-[color:var(--surface-strong)]/80 p-6 sm:p-7" role="listitem">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <Typography as="h3" variant="h4">
+                    {phase.label}
+                  </Typography>
+                  <Typography as="p" variant="body-sm" muted className="mt-2">
+                    {phase.description}
+                  </Typography>
+                </div>
+                <div className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-caption text-primary">
+                  {phase.projects.length} project{phase.projects.length === 1 ? "" : "s"}
+                </div>
+              </div>
 
               {phase.projects.length > 0 && (
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-5 flex flex-wrap gap-2">
                   {phase.projects.map((project) => (
                     <span
                       key={project.id}
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-caption text-foreground/80"
+                      className="rounded-full border border-[color:var(--border-color)] bg-[color:var(--surface)]/80 px-3 py-1 text-caption text-foreground/80"
                     >
                       {project.name}
                     </span>
                   ))}
                 </div>
               )}
-            </div>
+            </GlassPanel>
           ))}
         </div>
       </Container>

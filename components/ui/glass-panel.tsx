@@ -9,7 +9,7 @@ export function GlassPanel({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md",
+        "glass-surface relative overflow-hidden rounded-[28px] p-6 sm:p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(2,6,23,0.12)]",
         className
       )}
       {...props}

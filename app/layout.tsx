@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat, Poppins, JetBrains_Mono } from "next/font/google";
+import { createMetadata, createStructuredData, viewportConfig } from "@/lib/metadata";
 import "./globals.css";
 
 const inter = Inter({
@@ -28,77 +29,32 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://smartversestudio.com"),
+export const metadata: Metadata = createMetadata();
 
-  title: {
-    default: "Smart Verse Studio",
-    template: "%s | Smart Verse Studio",
-  },
-
-  description:
-    "Official Smart Verse Studio ecosystem connecting AI, Digital Publishing, Travel, Healthcare, Marketplace, SaaS, and Future Digital Innovation.",
-
-  keywords: [
-    "Smart Verse Studio",
-    "AI",
-    "SaaS",
-    "Travel",
-    "Healthcare",
-    "Marketplace",
-    "Digital Publishing",
-    "Firebase",
-    "Next.js",
-    "Muhammad Ali",
-  ],
-
-  authors: [
-    {
-      name: "Muhammad Ali",
-    },
-  ],
-
-  creator: "Muhammad Ali",
-
-  publisher: "Smart Verse Studio",
-
-  robots: {
-    index: true,
-    follow: true,
-  },
-
-  openGraph: {
-    title: "Smart Verse Studio",
-    description: "Official Smart Verse Studio Digital Ecosystem",
-    url: "https://smartversestudio.com",
-    siteName: "Smart Verse Studio",
-    locale: "en_US",
-    type: "website",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Smart Verse Studio",
-    description: "Official Smart Verse Studio Digital Ecosystem",
-  },
-};
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: "#0A0A0F",
-};
+export const viewport: Viewport = viewportConfig;
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const structuredData = createStructuredData();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${montserrat.variable} ${poppins.variable} ${jetbrainsMono.variable}`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-background focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-foreground focus:shadow-[0_12px_30px_rgba(2,6,23,0.16)]"
+        >
+          Skip to content
+        </a>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         {children}
       </body>
     </html>

@@ -48,6 +48,7 @@ const Typography = React.forwardRef<HTMLElement, TypographyProps>(
       <Comp
         ref={ref}
         className={cn(
+          "antialiased leading-[1.6] tracking-[-0.01em] text-pretty",
           typographyVariants({ variant }),
           muted && "text-muted",
           gradient && "text-gradient",

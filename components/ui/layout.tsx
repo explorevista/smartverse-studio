@@ -8,7 +8,7 @@ export function Container({
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn("mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8", className)}
+      className={cn("mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 xl:px-10", className)}
       {...props}
     >
       {children}
@@ -22,7 +22,10 @@ export function Section({
   ...props
 }: React.HTMLAttributes<HTMLElement>) {
   return (
-    <section className={cn("py-16 sm:py-20 lg:py-28", className)} {...props}>
+    <section
+      className={cn("scroll-mt-24 py-20 sm:py-24 lg:py-32 xl:py-36 motion-safe:animate-fadeUp", className)}
+      {...props}
+    >
       {children}
     </section>
   );

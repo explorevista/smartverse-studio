@@ -2,7 +2,6 @@ import { Navbar } from "@/components/navigation/navbar";
 import { Hero } from "@/components/sections/hero";
 import { EcosystemOverview } from "@/components/sections/ecosystem-overview";
 import { Features } from "@/components/sections/features";
-import { Statistics } from "@/components/sections/statistics";
 import { FounderSection } from "@/components/sections/founder";
 import { Timeline } from "@/components/sections/timeline";
 import { Mission } from "@/components/sections/mission";
@@ -13,14 +12,13 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
-        <Statistics />
         <EcosystemOverview />
         <Features />
+        <Mission />
         <FounderSection />
         <Timeline />
-        <Mission />
         <CtaBanner />
       </main>
       <Footer />

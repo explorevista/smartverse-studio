@@ -31,7 +31,7 @@ export function Features() {
     <Section id="features">
       <Container>
         <SectionHeading
-          eyebrow="Capabilities"
+          eyebrow="Platform Features"
           title={`What Powers the ${headquarters.name} Ecosystem`}
           description="One shared foundation, purpose-built for every vertical inside the ecosystem."
         />
@@ -40,8 +40,8 @@ export function Features() {
           {platformFeatures.map((feature) => {
             const Icon = iconMap[feature.icon];
             return (
-              <GlassPanel key={feature.id} className="p-6">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary/30 bg-primary/10">
+              <GlassPanel key={feature.id} className="flex h-full flex-col border-[color:var(--border-color)] bg-[color:var(--surface-strong)]/80 p-6 sm:p-7">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10">
                   <Icon className="h-5 w-5 text-primary" aria-hidden="true" />
                 </div>
 

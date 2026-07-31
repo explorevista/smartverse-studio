@@ -20,7 +20,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-pattern '.next/**' --ignore-pattern 'node_modules/**' --max-warnings=0"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
