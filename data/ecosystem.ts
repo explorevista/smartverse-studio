@@ -4,6 +4,9 @@
 export interface SocialLink {
   platform: string;
   url: string;
+  icon?: string;
+  username?: string;
+  order?: number;
 }
 
 export interface EcosystemProject {
@@ -17,6 +20,14 @@ export interface EcosystemProject {
   alternateUrls?: { label: string; url: string }[];
   email?: string;
   isHeadquarters?: boolean;
+  slug?: string;
+  logo?: string;
+  thumbnail?: string;
+  github?: string;
+  technologies?: string[];
+  featured?: boolean;
+  priority?: number;
+  launchYear?: number;
 }
 
 export const founder = {
@@ -28,8 +39,8 @@ export const founder = {
 };
 
 export const headquarters = {
-  name: "Smart Verse Studio",
-  tagline: "Building the Future of AI, Learning, Travel and Digital Innovation",
+  name: "SmartVerse Studio",
+  tagline: "Building Smarter Digital Products for the Future",
   description:
     "Smart Verse Studio is a premium digital ecosystem connecting AI tools, digital publishing, travel platforms, healthcare innovation, rental marketplace solutions, local service platforms, affiliate commerce and future-ready digital experiences into one unified headquarters.",
   repository: "https://github.com/explorevista/smartverse-studio",
