@@ -1,4 +1,4 @@
-import { Container, Section, Grid } from "@/components/ui/layout";
+import { Container, Section } from "@/components/ui/layout";
 import { GlassPanel } from "@/components/ui/glass-panel";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Typography } from "@/components/ui/typography";
