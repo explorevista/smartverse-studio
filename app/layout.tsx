@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat, Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { siteConfig } from "@/config/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,8 +29,10 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
+const siteUrl = siteConfig.productionUrl;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://smartversestudio.com"),
+  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
 
   title: {
     default: "Smart Verse Studio",
@@ -70,7 +73,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Smart Verse Studio",
     description: "Official Smart Verse Studio Digital Ecosystem",
-    url: "https://smartversestudio.com",
+    ...(siteUrl ? { url: siteUrl } : {}),
     siteName: "Smart Verse Studio",
     locale: "en_US",
     type: "website",
