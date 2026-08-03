@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat, Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { analyticsConfig } from "@/data/ecosystem";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -70,6 +72,10 @@ export const metadata: Metadata = {
     follow: true,
   },
 
+  verification: {
+    google: analyticsConfig.searchConsoleVerification,
+  },
+
   openGraph: {
     title: "Smart Verse Studio",
     description: "Official Smart Verse Studio Digital Ecosystem",
@@ -103,6 +109,7 @@ export default function RootLayout({
         className={`${inter.variable} ${montserrat.variable} ${poppins.variable} ${jetbrainsMono.variable}`}
       >
         {children}
+        <GoogleAnalytics />
       </body>
     </html>
   );

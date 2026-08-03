@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/hero";
 import { EcosystemOverview } from "@/components/sections/ecosystem-overview";
 import { Features } from "@/components/sections/features";
 import { Statistics } from "@/components/sections/statistics";
+import { FeaturedTools } from "@/components/sections/featured-tools";
 import { FounderSection } from "@/components/sections/founder";
 import { Timeline } from "@/components/sections/timeline";
 import { Mission } from "@/components/sections/mission";
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Statistics />
         <EcosystemOverview />
+        <FeaturedTools />
         <Features />
         <FounderSection />
         <Timeline />

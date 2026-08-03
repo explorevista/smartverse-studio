@@ -221,3 +221,19 @@ export const platformFeatures: PlatformFeature[] = [
   { id: "architecture", title: "Firebase-Ready Architecture", description: "Built on a scalable Next.js and Firebase foundation, ready for authentication and data at any scale.", icon: "shield-check" },
   { id: "design", title: "Premium Design System", description: "One consistent, modern UI system shared across the entire ecosystem — fast, responsive, accessible.", icon: "layout-grid" },
 ];
+
+export interface FeaturedTool {
+  id: string;
+  name: string;
+  category: string;
+  cta: string;
+}
+
+export const featuredTools: FeaturedTool[] = [
+  { id: "gif-creator", name: "GIF Creator", category: "Media", cta: "Open Tool" },
+  { id: "qr-generator", name: "QR Generator", category: "Utility", cta: "Generate QR" },
+  { id: "password-generator", name: "Password Generator", category: "Security", cta: "Generate Password" },
+  { id: "pdf-toolkit", name: "PDF Toolkit", category: "Documents", cta: "Open Toolkit" },
+  { id: "resume-builder", name: "Resume Builder", category: "Career", cta: "Build Resume" },
+  { id: "ai-translator", name: "AI Translator", category: "AI Productivity", cta: "Translate Now" },
+];
