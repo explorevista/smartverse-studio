@@ -30,7 +30,44 @@ export interface EcosystemProject {
   launchYear?: number;
 }
 
-export const founder = {
+export interface Founder {
+  name: string;
+  role: string;
+  email: string;
+  whatsapp: string;
+  messenger: string;
+}
+
+export interface Headquarters {
+  name: string;
+  tagline: string;
+  description: string;
+  repository: string;
+}
+
+export interface AnalyticsConfig {
+  ga4MeasurementId: string;
+  adsensePublisherId: string;
+  adsTxtLine: string;
+  searchConsoleVerification: string;
+}
+
+export interface RoadmapPhase {
+  id: string;
+  label: string;
+  description: string;
+  projects: EcosystemProject[];
+}
+
+export interface PlatformFeature {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+
+export const founder: Founder = {
   name: "Muhammad Ali",
   role: "Founder & CEO",
   email: "muhammadalikn53@gmail.com",
@@ -38,7 +75,7 @@ export const founder = {
   messenger: "+92 327 2358384",
 };
 
-export const headquarters = {
+export const headquarters: Headquarters = {
   name: "SmartVerse Studio",
   tagline: "Building Smarter Digital Products for the Future",
   description:
@@ -146,14 +183,14 @@ export const socialLinks: SocialLink[] = [
   { platform: "Instagram (Inspire Reads Hub)", url: "https://www.instagram.com/inspirereadshub2025" },
 ];
 
-export const analyticsConfig = {
+export const analyticsConfig: AnalyticsConfig = {
   ga4MeasurementId: "G-XFYP9S89XR",
   adsensePublisherId: "pub-7495097418204600",
   adsTxtLine: "google.com, pub-7495097418204600, DIRECT, f08c47fec0942fa0",
   searchConsoleVerification: "-RLGta2YHyblTY3SKORbDxIig2jg7TR1ZlQib9Hx28w",
 };
 
-export const roadmapPhases = [
+export const roadmapPhases: RoadmapPhase[] = [
   {
     id: "live",
     label: "Live Today",
@@ -174,7 +211,7 @@ export const roadmapPhases = [
   },
 ];
 
-export const platformFeatures = [
+export const platformFeatures: PlatformFeature[] = [
   { id: "ai", title: "AI-Powered Tools", description: "Smart Tools Universe brings intelligent, productivity-first AI tools into one workspace.", icon: "sparkles" },
   { id: "publishing", title: "Digital Publishing", description: "Digital Reads Studio delivers curated books and learning resources under one platform.", icon: "book-open" },
   { id: "travel", title: "Travel & Discovery", description: "ExploreVista and TravelScope 360 connect travelers to destinations, deals, and bookings.", icon: "map-pinned" },
