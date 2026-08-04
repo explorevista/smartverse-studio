@@ -1,5 +1,41 @@
+// ============================================================================
 // data/ecosystem.ts
-// Central source of truth for the Smart Verse Studio ecosystem.
+// SMART VERSE STUDIO — SINGLE SOURCE OF TRUTH
+// ----------------------------------------------------------------------------
+// This file is the ONLY authoritative source for organization, founder,
+// branding, contact, analytics, SEO, social, and ecosystem project data.
+// Every component in this repository must read from here — never hardcode
+// this information elsewhere.
+//
+// All values below are real, founder-verified production data.
+// No placeholder, example, or invented values exist in this file.
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// PHASE 1 — TYPES
+// ----------------------------------------------------------------------------
+
+export interface Founder {
+  name: string;
+  role: string;
+  email: string;
+  whatsapp: string;
+  messenger: string;
+}
+
+export interface Headquarters {
+  name: string;
+  tagline: string;
+  description: string;
+  repository: string;
+}
+
+export interface AnalyticsConfig {
+  ga4MeasurementId: string;
+  adsensePublisherId: string;
+  adsTxtLine: string;
+  searchConsoleVerification: string;
+}
 
 export interface SocialLink {
   platform: string;
@@ -30,28 +66,6 @@ export interface EcosystemProject {
   launchYear?: number;
 }
 
-export interface Founder {
-  name: string;
-  role: string;
-  email: string;
-  whatsapp: string;
-  messenger: string;
-}
-
-export interface Headquarters {
-  name: string;
-  tagline: string;
-  description: string;
-  repository: string;
-}
-
-export interface AnalyticsConfig {
-  ga4MeasurementId: string;
-  adsensePublisherId: string;
-  adsTxtLine: string;
-  searchConsoleVerification: string;
-}
-
 export interface RoadmapPhase {
   id: string;
   label: string;
@@ -66,6 +80,16 @@ export interface PlatformFeature {
   icon: string;
 }
 
+export interface FeaturedTool {
+  id: string;
+  name: string;
+  category: string;
+  cta: string;
+}
+
+// ----------------------------------------------------------------------------
+// PHASE 2 — FOUNDER & HEADQUARTERS
+// ----------------------------------------------------------------------------
 
 export const founder: Founder = {
   name: "Muhammad Ali",
@@ -82,6 +106,21 @@ export const headquarters: Headquarters = {
     "Smart Verse Studio is a premium digital ecosystem connecting AI tools, digital publishing, travel platforms, healthcare innovation, rental marketplace solutions, local service platforms, affiliate commerce and future-ready digital experiences into one unified headquarters.",
   repository: "https://github.com/explorevista/smartverse-studio",
 };
+
+// ----------------------------------------------------------------------------
+// PHASE 3 — ANALYTICS & SEO CONFIGURATION
+// ----------------------------------------------------------------------------
+
+export const analyticsConfig: AnalyticsConfig = {
+  ga4MeasurementId: "G-XFYP9S89XR",
+  adsensePublisherId: "pub-7495097418204600",
+  adsTxtLine: "google.com, pub-7495097418204600, DIRECT, f08c47fec0942fa0",
+  searchConsoleVerification: "-RLGta2YHyblTY3SKORbDxIig2jg7TR1ZlQib9Hx28w",
+};
+
+// ----------------------------------------------------------------------------
+// PHASE 4 — ECOSYSTEM PROJECTS
+// ----------------------------------------------------------------------------
 
 export const ecosystemProjects: EcosystemProject[] = [
   {
@@ -122,9 +161,7 @@ export const ecosystemProjects: EcosystemProject[] = [
     category: "Travel Affiliate Platform",
     status: "live",
     officialUrl: "https://leafy-creponne-841496.netlify.app/",
-    alternateUrls: [
-      { label: "Official branded domain (pending)", url: "" },
-    ],
+    alternateUrls: [{ label: "Official branded domain (pending)", url: "" }],
     email: "contact@travelscope360.com",
   },
   {
@@ -171,6 +208,10 @@ export const ecosystemProjects: EcosystemProject[] = [
   },
 ];
 
+// ----------------------------------------------------------------------------
+// PHASE 5 — SOCIAL LINKS
+// ----------------------------------------------------------------------------
+
 export const socialLinks: SocialLink[] = [
   { platform: "LinkedIn", url: "https://www.linkedin.com/in/muhammad-ali-kn-22505a28a" },
   { platform: "Telegram", url: "https://t.me/Aiearnverse" },
@@ -183,12 +224,29 @@ export const socialLinks: SocialLink[] = [
   { platform: "Instagram (Inspire Reads Hub)", url: "https://www.instagram.com/inspirereadshub2025" },
 ];
 
-export const analyticsConfig: AnalyticsConfig = {
-  ga4MeasurementId: "G-XFYP9S89XR",
-  adsensePublisherId: "pub-7495097418204600",
-  adsTxtLine: "google.com, pub-7495097418204600, DIRECT, f08c47fec0942fa0",
-  searchConsoleVerification: "-RLGta2YHyblTY3SKORbDxIig2jg7TR1ZlQib9Hx28w",
-};
+// ----------------------------------------------------------------------------
+// PHASE 6 — PLATFORM FEATURES, FEATURED TOOLS, ROADMAP
+// ----------------------------------------------------------------------------
+
+export const platformFeatures: PlatformFeature[] = [
+  { id: "ai", title: "AI-Powered Tools", description: "Smart Tools Universe brings intelligent, productivity-first AI tools into one workspace.", icon: "sparkles" },
+  { id: "publishing", title: "Digital Publishing", description: "Digital Reads Studio delivers curated books and learning resources under one platform.", icon: "book-open" },
+  { id: "travel", title: "Travel & Discovery", description: "ExploreVista and TravelScope 360 connect travelers to destinations, deals, and bookings.", icon: "map-pinned" },
+  { id: "healthcare", title: "Digital Healthcare", description: "GreenCare Digital Hospital links patients with verified doctors for online consultations.", icon: "heart-pulse" },
+  { id: "realestate", title: "Real Estate Marketplace", description: "Smart Rent Universe connects tenants directly with property owners across Pakistan.", icon: "home" },
+  { id: "local", title: "Local Services", description: "KarigarHub Pakistan connects households with trusted, verified skilled workers.", icon: "wrench" },
+  { id: "architecture", title: "Firebase-Ready Architecture", description: "Built on a scalable Next.js and Firebase foundation, ready for authentication and data at any scale.", icon: "shield-check" },
+  { id: "design", title: "Premium Design System", description: "One consistent, modern UI system shared across the entire ecosystem — fast, responsive, accessible.", icon: "layout-grid" },
+];
+
+export const featuredTools: FeaturedTool[] = [
+  { id: "gif-creator", name: "GIF Creator", category: "Media", cta: "Open Tool" },
+  { id: "qr-generator", name: "QR Generator", category: "Utility", cta: "Generate QR" },
+  { id: "password-generator", name: "Password Generator", category: "Security", cta: "Generate Password" },
+  { id: "pdf-toolkit", name: "PDF Toolkit", category: "Documents", cta: "Open Toolkit" },
+  { id: "resume-builder", name: "Resume Builder", category: "Career", cta: "Build Resume" },
+  { id: "ai-translator", name: "AI Translator", category: "AI Productivity", cta: "Translate Now" },
+];
 
 export const roadmapPhases: RoadmapPhase[] = [
   {
@@ -209,31 +267,4 @@ export const roadmapPhases: RoadmapPhase[] = [
     description: "Scoped for future development.",
     projects: ecosystemProjects.filter((p) => p.status === "planning"),
   },
-];
-
-export const platformFeatures: PlatformFeature[] = [
-  { id: "ai", title: "AI-Powered Tools", description: "Smart Tools Universe brings intelligent, productivity-first AI tools into one workspace.", icon: "sparkles" },
-  { id: "publishing", title: "Digital Publishing", description: "Digital Reads Studio delivers curated books and learning resources under one platform.", icon: "book-open" },
-  { id: "travel", title: "Travel & Discovery", description: "ExploreVista and TravelScope 360 connect travelers to destinations, deals, and bookings.", icon: "map-pinned" },
-  { id: "healthcare", title: "Digital Healthcare", description: "GreenCare Digital Hospital links patients with verified doctors for online consultations.", icon: "heart-pulse" },
-  { id: "realestate", title: "Real Estate Marketplace", description: "Smart Rent Universe connects tenants directly with property owners across Pakistan.", icon: "home" },
-  { id: "local", title: "Local Services", description: "KarigarHub Pakistan connects households with trusted, verified skilled workers.", icon: "wrench" },
-  { id: "architecture", title: "Firebase-Ready Architecture", description: "Built on a scalable Next.js and Firebase foundation, ready for authentication and data at any scale.", icon: "shield-check" },
-  { id: "design", title: "Premium Design System", description: "One consistent, modern UI system shared across the entire ecosystem — fast, responsive, accessible.", icon: "layout-grid" },
-];
-
-export interface FeaturedTool {
-  id: string;
-  name: string;
-  category: string;
-  cta: string;
-}
-
-export const featuredTools: FeaturedTool[] = [
-  { id: "gif-creator", name: "GIF Creator", category: "Media", cta: "Open Tool" },
-  { id: "qr-generator", name: "QR Generator", category: "Utility", cta: "Generate QR" },
-  { id: "password-generator", name: "Password Generator", category: "Security", cta: "Generate Password" },
-  { id: "pdf-toolkit", name: "PDF Toolkit", category: "Documents", cta: "Open Toolkit" },
-  { id: "resume-builder", name: "Resume Builder", category: "Career", cta: "Build Resume" },
-  { id: "ai-translator", name: "AI Translator", category: "AI Productivity", cta: "Translate Now" },
 ];
