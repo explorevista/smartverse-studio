@@ -268,3 +268,95 @@ export const roadmapPhases: RoadmapPhase[] = [
     projects: ecosystemProjects.filter((p) => p.status === "planning"),
   },
 ];
+
+// ----------------------------------------------------------------------------
+// PHASE 7 — ORGANIZATION, BRANDING & PLATFORM CONFIGURATION
+// ----------------------------------------------------------------------------
+
+export interface Organization {
+  legalName: string;
+  brandName: string;
+  shortName: string;
+  founder: string;
+  brandEmail: string;
+  supportEmail: string;
+  repository: string;
+  country: string;
+  timezone: string;
+  currency: string;
+  defaultLanguage: string;
+  copyrightYear: number;
+  mission: string;
+}
+
+export const organization: Organization = {
+  legalName: headquarters.name,
+  brandName: headquarters.name,
+  shortName: "SmartVerse",
+  founder: founder.name,
+  brandEmail: founder.email,
+  supportEmail: founder.email,
+  repository: headquarters.repository,
+  country: "Pakistan",
+  timezone: "Asia/Karachi",
+  currency: "PKR",
+  defaultLanguage: "en",
+  copyrightYear: new Date().getFullYear(),
+  mission: headquarters.description,
+};
+
+export interface BrandingAssets {
+  logo: string;
+  logoDark: string;
+  logoLight: string;
+  favicon: string;
+  appleTouchIcon: string;
+  openGraphImage: string;
+  twitterImage: string;
+  themeColor: string;
+  accentColor: string;
+}
+
+// Paths only — actual files are added once the verified asset export
+// (Google Drive) is placed into public/assets/, per existing folder structure.
+export const brandingAssets: BrandingAssets = {
+  logo: "/assets/logos/smartverse-logo.png",
+  logoDark: "/assets/logos/smartverse-logo-dark.png",
+  logoLight: "/assets/logos/smartverse-logo-light.png",
+  favicon: "/assets/favicon/favicon.ico",
+  appleTouchIcon: "/assets/favicon/apple-touch-icon.png",
+  openGraphImage: "/assets/social/og-image.jpg",
+  twitterImage: "/assets/social/og-image.jpg",
+  themeColor: "#0A0A0F",
+  accentColor: "#D4AF37",
+};
+
+export interface PlatformFeatureFlags {
+  aiAssistant: boolean;
+  voiceAssistant: boolean;
+  darkTheme: boolean;
+  lightTheme: boolean;
+  analytics: boolean;
+  adsense: boolean;
+  searchConsole: boolean;
+  structuredData: boolean;
+  sitemap: boolean;
+  robots: boolean;
+  openGraph: boolean;
+  twitterCards: boolean;
+}
+
+export const platformFeatureFlags: PlatformFeatureFlags = {
+  aiAssistant: false,
+  voiceAssistant: false,
+  darkTheme: true,
+  lightTheme: true,
+  analytics: Boolean(analyticsConfig.ga4MeasurementId),
+  adsense: Boolean(analyticsConfig.adsensePublisherId),
+  searchConsole: Boolean(analyticsConfig.searchConsoleVerification),
+  structuredData: false,
+  sitemap: true,
+  robots: true,
+  openGraph: true,
+  twitterCards: true,
+};
